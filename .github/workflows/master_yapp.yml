@@ -41,7 +41,7 @@ jobs:
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
-          name: angular-app
+          name: node-app
           path: release.zip
 
   deploy:
@@ -57,7 +57,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
         with:
-          name: angular-app
+          name: node-app
 
       - name: unzip artifacts
         run: unzip release.zip 
@@ -75,6 +75,6 @@ jobs:
         with:
           app-name: 'yapp'
           slot-name: 'Production'
-          package: ${{ github.workspace }}/angular-app
+          package: .
 
           
