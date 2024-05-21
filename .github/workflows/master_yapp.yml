@@ -37,7 +37,6 @@ jobs:
 
       - name: Zip Artifacts
         run: 7z a release.zip ./* -r
-        working-directory: yourapp/dist
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
