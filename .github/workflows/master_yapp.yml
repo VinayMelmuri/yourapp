@@ -36,13 +36,13 @@ jobs:
         run: npm run build --prod
 
       - name: Zip Artifacts
-        run: 7z a release.zip ./* -r
+        run: 7z a release.zip ./dist -r
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: yourapp/dist/release.zip
+          path: release.zip
 
   deploy:
     runs-on: ubuntu-latest
@@ -58,6 +58,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: node-app
+          path: .
 
       - name: unzip artifacts
         run: 7z x release.zip  
