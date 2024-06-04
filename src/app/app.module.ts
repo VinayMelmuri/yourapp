@@ -10,7 +10,10 @@ import { MatListModule } from '@angular/material/list';
 // import { AddComponent } from './add/add.component';
 import {MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 // import { HomeComponent } from './home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import { MatCardModule } from '@angular/material/card';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSidenavModule,MatListModule,MatFormFieldModule,MatCardModule
+    MatSidenavModule,
+    MatIconModule,
+    MatToolbarModule,MatListModule,MatFormFieldModule,MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

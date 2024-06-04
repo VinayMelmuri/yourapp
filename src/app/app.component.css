@@ -1,3 +1,26 @@
 .content{
     text-align: center;
 }
+
+.mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .email-link {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Ensures the text color is inherited */
+  }
+  
+  .emailmargin{
+    margin-left: 10px;
+  }
+
+  .contact-info {
+    display: flex;
+    align-items: center;
+    /* gap: 8px;  */
+  }

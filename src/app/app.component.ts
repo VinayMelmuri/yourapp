@@ -11,8 +11,11 @@ export class AppComponent {
 
   constructor(private route:Router){}
 
+    goto1(){
+      this.route.navigate(['/component/home'])
+    }
     goto(){
-      this.route.navigate(['/add']);
+      this.route.navigate(['/component/add']);
     }
 }
 
