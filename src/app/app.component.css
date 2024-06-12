@@ -3,7 +3,7 @@
 }
 
 .mat-toolbar {
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
   }
   .spacer {
@@ -11,6 +11,8 @@
   }
 
   .email-link {
+    display: flex;
+    align-items: center; 
     text-decoration: none; /* Removes underline */
     color: inherit; /* Ensures the text color is inherited */
   }
@@ -21,6 +23,38 @@
 
   .contact-info {
     display: flex;
-    align-items: center;
-    /* gap: 8px;  */
+    align-items: center; 
+    /* gap:; */
   }
+
+  @media (max-width: 599px) {
+    .contact-info {
+      display: none;
+    }
+  }
+
+  .mat-sidenav-container{
+    display: flex;
+    flex: 1; 
+}
+
+.mat-sidenav{
+  display: flex;
+}
+
+  .mat-side-content{
+    flex: 1;
+    display: flex;
+    /* flex-direction: column; */
+  
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+} 

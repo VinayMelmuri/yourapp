@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
@@ -8,14 +10,22 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'yourapp';
+  isScreenSmall: boolean = false;
+  @ViewChild('sidenav')
+  sidenav!: MatSidenav;
 
-  constructor(private route:Router){}
+  constructor(private route:Router,private breakpointObserver: BreakpointObserver){
+    this.breakpointObserver.observe([Breakpoints.Handset,Breakpoints.Tablet]).subscribe(result=>{
+      this.isScreenSmall = result.matches;
 
-    goto1(){
-      this.route.navigate(['/component/home'])
+    }) 
+  }
+
+  closeSidenav(){
+    if(this.isScreenSmall){
+      this.sidenav.close();
     }
-    goto(){
-      this.route.navigate(['/component/add']);
-    }
+  }
+   
 }
 

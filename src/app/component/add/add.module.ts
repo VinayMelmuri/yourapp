@@ -8,6 +8,8 @@ import {MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 @NgModule({
   declarations: [AddComponent],
@@ -16,7 +18,8 @@ import { MatButtonModule } from '@angular/material/button';
     ReactiveFormsModule,
     MatInputModule,
     AddRoutingModule,MatCardModule,
-    MatButtonModule,MatFormFieldModule
+    MatButtonModule,MatFormFieldModule,
+    FlexLayoutModule
   ]
 })
 export class AddModule { }
