@@ -9,6 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 
 @NgModule({
@@ -19,7 +20,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatInputModule,
     AddRoutingModule,MatCardModule,
     MatButtonModule,MatFormFieldModule,
-    FlexLayoutModule
+    FlexLayoutModule,MatAutocompleteModule
   ]
 })
 export class AddModule { }
