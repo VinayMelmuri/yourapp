@@ -5,12 +5,13 @@ import { HomeComponent } from './component/home/home.component';
 
 const routes: Routes = [
   {path:'component',loadChildren:()=>import('./component/component.module').then((m)=>m.ComponentModule)},
-  { path: '', redirectTo: '/component', pathMatch: 'full' },
-  { path: '**', redirectTo: '/component' }
+  { path: '', redirectTo: '/component/home', pathMatch: 'full' },
+  { path: '**', redirectTo: '/component/home' }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }
